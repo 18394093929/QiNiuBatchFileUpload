@@ -26,8 +26,8 @@ import com.qiniu.util.Auth;
 @RequestMapping("/upload")
 public class UploadController {
 	//设置好账号的ACCESS_KEY和SECRET_KEY
-	  String ACCESS_KEY = "Le8jyHg71J7UuVvs6Gi7_4QKYUmF-UMbJOZgmLMO"; //这两个登录七牛 账号里面可以找到
-	  String SECRET_KEY = "VMO5cIWGBxxOYoBrl3IifokRkefGE_WWxKmC2n2d";
+	  String ACCESS_KEY = "Le8jyHg71J7UuV***KYUmF-UMbJOZgmLMO"; //这两个登录七牛 账号里面可以找到
+	  String SECRET_KEY = "VMO5cIW***ifokRkefGE_WWxKmC2n2d";
 
 	  //要上传的空间
 	  String bucketname = "usercenterfilesccw"; //对应要上传到七牛上 你的那个路径（自己建文件夹 注意设置公开）
@@ -43,6 +43,10 @@ public class UploadController {
 		  uploadManager=new UploadManager(conf);
 	  }
 
+	/**上传到本地服务器
+	 * @param request
+	 * @param response
+	 */
 	@RequestMapping("/test.do")
 	public void test(HttpServletRequest request,HttpServletResponse response){
 		String savePath = request.getSession().getServletContext()
@@ -102,6 +106,10 @@ public class UploadController {
 		}
 		
 	}
+	/**上传到七牛云端
+	 * @param request
+	 * @param response
+	 */
 	@RequestMapping("testQiNiu.do")
 	public void testQN(HttpServletRequest request,HttpServletResponse response){
 		List<FileItem> fileList = null;
