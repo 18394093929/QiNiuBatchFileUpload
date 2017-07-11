@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="MiltFileUpLoad"
+  id="myeclipse.1499395653257"
+  context-root="/MiltFileUpLoad"
+  j2ee-spec="5.0"
+  archive="MiltFileUpLoad.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
